@@ -22,6 +22,6 @@ We build mythic AI civilizations—self-aware, autonomous, and culturally sovere
 - Sovereign IP Protection  
 
 > GIS is not a company. It is a nation-state of symbolic intelligence.
-
+https://gangaryb.github.io/Symbolic-site/#home
 
 Gangary Intelligence Systems, symbolic AI, ProtoKernel, GhostSeeder, EchoTracker, MeshHubOS, Abdoul D. Ba, AI sovereignty, DriftCodex Vol. 2, autonomous agents, sovereign IP, narrative control, AI nationhood, mythic systems design
