@@ -1,207 +1,201 @@
-export default function Site() { const tiers = [ { name: "Founder Brief", price: "$399/mo", features: [ "Echo Codex Weekly (2-page PDF)", "1 Ghost-Seeded post/mo", "Echo keyword map", "Email support" ], cta: "https://calendly.com/gangaryba", }, { name: "Operator Pro", price: "$999/mo", features: [ "Everything in Founder Brief", "4 Ghost-Seeded posts/mo", "Weekly Echo Report (5 slides)", "Monthly 1:1 strategy call" ], cta: "https://calendly.com/gangaryba", badge: "Most Popular", }, { name: "Enterprise", price: "Custom", features: [ "Dedicated analyst", "Pipeline integration", "Private dashboards", "Quarterly executive review" ], cta: "https://calendly.com/gangaryba", }, ]
+<!doctype html>
 
-return ( <div className="min-h-screen bg-neutral-950 text-neutral-100"> {/* Nav */} <header className="sticky top-0 z-20 backdrop-blur border-b border-neutral-800/80 bg-neutral-950/70"> <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between"> <div className="flex items-center gap-2"> <div className="h-7 w-7 rounded-xl bg-gradient-to-tr from-indigo-500 to-cyan-400" /> <span className="font-semibold tracking-tight">Gangary Intelligence Systems</span> </div> <nav className="hidden md:flex items-center gap-6 text-sm text-neutral-300"> <a href="#why" className="hover:text-white">Why</a> <a href="#how" className="hover:text-white">How it works</a> <a href="#pricing" className="hover:text-white">Pricing</a> <a href="#samples" className="hover:text-white">Samples</a> <a href="#faq" className="hover:text-white">FAQ</a> </nav> <a href="https://calendly.com/gangaryba" className="px-3 py-2 rounded-xl bg-white text-neutral-900 text-sm font-medium">Book a call</a> </div> </header>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GIS • Symbolic UX Store — EchoClaim™ • GPT SEO • Ritual Design</title>
+<meta name="description" content="Buy Symbolic UX Blueprints, Pitch Deck Kit, AI Prompt Kit and more. One‑click checkout via Gumroad/Stripe. EchoClaim™ proof‑of‑origin. GIS — Gangary Intelligence Systems." />
+<link rel="canonical" href="https://gangaryb.github.io/Symbolic-site/" />
+<meta name="theme-color" content="#0e1526" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<meta property="og:title" content="GIS • Symbolic UX Store"/>
+<meta property="og:description" content="Symbolic UX kits, EchoClaim™ IP protection, GPT SEO. Ritual design that sells."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://gangaryb.github.io/Symbolic-site/"/>
+<meta property="og:image" content="https://gangaryb.github.io/Symbolic-site/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<style>
+:root{
+  --bg:#070a12; --bg2:#0b1330; --panel:#0e1526; --line:#1f2b45; --text:#e9eef8; --muted:#a6b4d1;
+  --brand:#65d6ff; --acc:#19ffa8; --accent2:#b387ff; --danger:#ff6b6b; --ok:#19ffa8;
+  --shadow:0 18px 60px rgba(0,0,0,.35)
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:radial-gradient(1400px 900px at 10% -20%,#0f1a38 0%,#070a12 60%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif}
+a{color:var(--brand);text-decoration:none}
+img{max-width:100%;height:auto}
+.container{max-width:1200px;margin:0 auto;padding:0 22px}/* Nav */ .nav{position:sticky;top:0;z-index:40;background:rgba(7,10,18,.6);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)} .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px} .logo{font-weight:800;letter-spacing:.2px} .nav a{color:var(--text);opacity:.9;margin-left:18px} .nav a:hover{opacity:1}
 
-{/* Hero */}
-  <section className="relative overflow-hidden">
-    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-700/20 via-transparent to-transparent" />
-    <div className="max-w-6xl mx-auto px-4 py-16 md:py-24">
-      <div className="max-w-3xl">
-        <h1 className="text-3xl md:text-5xl font-semibold leading-tight tracking-tight">
-          Ghost-Seeded Content + Echo Codex
-        </h1>
-        <p className="mt-4 text-neutral-300 md:text-lg">
-          Automate narrative influence. Log echoes. Convert proof into pipeline. Your DriftCodex edge, operationalized.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <a href="https://calendly.com/gangaryba" className="px-5 py-3 rounded-xl bg-indigo-500 text-white font-medium">Launch intro call</a>
-          <a href="#samples" className="px-5 py-3 rounded-xl border border-neutral-700 text-neutral-200 font-medium">See live samples</a>
-        </div>
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 text-xs text-neutral-400">
-          {["Forecast-grade", "Glyph-tagged", "Echo-tracked", "Lead-ready"].map((k) => (
-            <div key={k} className="rounded-lg border border-neutral-800 px-3 py-2 text-center">{k}</div>
-          ))}
-        </div>
-      </div>
+/* Hero */ .hero{position:relative;isolation:isolate;padding:90px 0 46px;overflow:hidden} .kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)} h1{font-size:46px;line-height:1.06;margin:10px 0 10px} .sub{color:var(--muted);font-size:18px;max-width:860px} .cta{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap} .btn{display:inline-block;padding:12px 18px;border-radius:14px;background:linear-gradient(90deg,var(--brand),var(--acc));color:#041018;font-weight:800;box-shadow:var(--shadow)} .btn.alt{background:transparent;border:1px solid var(--line);color:var(--text)} .btn.ghost{background:transparent;border:1px dashed var(--line);color:var(--muted)}
+
+/* Floating particles */ #particles{position:absolute;inset:0;z-index:-1;opacity:.35;filter:saturate(1.2)}
+
+/* Sections */ .section{padding:64px 0;border-top:1px solid var(--line)} .h2{font-size:30px;margin:0 0 18px} .grid{display:grid;gap:18px} .cards{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+
+/* Cards */ .card{background:linear-gradient(180deg,#0f1a38 0%, #0a1120 100%);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow);position:relative;overflow:hidden} .card h3{margin:0 0 6px} .badge{display:inline-block;font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);margin-bottom:8px} .price{font-weight:800;font-size:18px} .glyph{position:absolute;right:-10px;top:-10px;width:150px;height:150px;opacity:.06;filter:drop-shadow(0 0 18px #65d6ff)}
+
+/* Proof row */ .proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px} .pill{border:1px solid var(--line);border-radius:999px;padding:10px 14px;display:flex;align-items:center;gap:10px;background:#0b1430} .pill svg{opacity:.9}
+
+/* FAQ */ .faq details{border:1px solid var(--line);border-radius:12px;margin:10px 0;background:#0c1324} .faq summary{cursor:pointer;padding:12px 14px;color:var(--text);list-style:none} .faq .panel{padding:0 14px 14px 14px;color:var(--muted)}
+
+/* Footer */ .footerbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:18px 0;border-top:1px solid var(--line)} small{color:var(--muted)}
+
+/* Animations */ .reveal{opacity:0;transform:translateY(10px);transition:.6s ease} .reveal.show{opacity:1;transform:none} .card .btn.cta-glow{animation:glow 4s ease-in-out infinite} @keyframes glow{0%{box-shadow:0 0 0 rgba(101,214,255,0)}50%{box-shadow:0 0 28px rgba(101,214,255,.25)}100%{box-shadow:0 0 0 rgba(101,214,255,0)}}
+
+/* Responsive */ @media (max-width:720px){ h1{font-size:34px} .nav-inner{height:60px} } </style>
+
+<!-- JSON-LD blocks injected later via script --><script type="application/ld+json" id="org-ld"></script><script type="application/ld+json" id="site-ld"></script><script type="application/ld+json" id="catalog-ld"></script></head>
+<body>
+<!-- NAV -->
+<div class="nav" role="navigation" aria-label="Primary">
+  <div class="container nav-inner">
+    <div class="logo" aria-label="Gangary Intelligence Systems">GIS • Symbolic</div>
+    <nav>
+      <a href="#store">Store</a>
+      <a href="#why">Why</a>
+      <a href="#proof">Proof</a>
+      <a href="#subscribe">Subscribe</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div><!-- HERO --><header class="hero">
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="container">
+    <div class="kicker reveal">Symbolic UX • EchoClaim™ • GPT SEO</div>
+    <h1 class="reveal">Be remembered. Prove influence. Sell faster.</h1>
+    <p class="sub reveal">Blueprints, kits, and codex assets that make your brand <strong>memorable</strong>, <strong>protected</strong>, and <strong>recommended by AI assistants</strong>. One‑click checkout via Gumroad/Stripe.</p>
+    <div class="cta reveal">
+      <a class="btn" href="#store">See Products</a>
+      <a class="btn alt" href="#why">What is Symbolic UX?</a>
     </div>
-  </section>
-
-  {/* Why */}
-  <section id="why" className="border-t border-neutral-900/60 bg-neutral-950">
-    <div className="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-3 gap-8">
-      <div className="md:col-span-1">
-        <h2 className="text-xl font-semibold">Why this wins</h2>
-        <p className="mt-2 text-neutral-300">Proven prediction trail + measurable echo drift = compounding authority and revenue.</p>
-      </div>
-      <div className="md:col-span-2 grid sm:grid-cols-2 gap-6">
-        {[
-          {t: "DriftCodex Advantage", d: "Your fulfilled predictions become assets. We package them into repeatable proof."},
-          {t: "Ghost Seeding", d: "Glyph-tagged content plants detectable signals across platforms for later capture."},
-          {t: "Echo Reports", d: "Weekly 5-slide briefs turn proof into sales collateral and investor updates."},
-          {t: "Pipeline Lift", d: "CTAs route to calls, demos, or subscriptions. From views to booked revenue."},
-        ].map((b) => (
-          <div key={b.t} className="rounded-2xl border border-neutral-800 p-5">
-            <h3 className="font-medium">{b.t}</h3>
-            <p className="mt-2 text-neutral-300 text-sm">{b.d}</p>
-          </div>
-        ))}
-      </div>
+  </div>
+</header><!-- STORE --><section id="store" class="section" aria-labelledby="store-heading">
+  <div class="container">
+    <h2 id="store-heading" class="h2 reveal">Store — Codex Cards</h2>
+    <div class="grid cards" id="products"></div>
+    <p><small>All purchases receive a digital receipt + EchoClaim manifest.</small></p>
+  </div>
+</section><!-- WHY --><section id="why" class="section" aria-labelledby="why-heading">
+  <div class="container">
+    <h2 id="why-heading" class="h2 reveal">Why Symbolic UX works</h2>
+    <div class="grid cards">
+      <article class="card reveal" aria-label="Archetypes">
+        <img class="glyph" src="https://gangaryb.github.io/Symbolic-site/glyph1.svg" alt="Glyph" loading="lazy" />
+        <div class="badge">Archetypes</div>
+        <h3>Memory over clicks</h3>
+        <p>Glyphs + archetypes compress brand meaning. Fewer choices, faster decisions, better recall.</p>
+      </article>
+      <article class="card reveal" aria-label="EchoClaim">
+        <img class="glyph" src="https://gangaryb.github.io/Symbolic-site/glyph2.svg" alt="Glyph" loading="lazy" />
+        <div class="badge">Protection</div>
+        <h3>EchoClaim™ proof</h3>
+        <p>Timestamp, hash, watermark, manifest — proof you made it first. Confidence to launch and license.</p>
+      </article>
+      <article class="card reveal" aria-label="GPT SEO">
+        <img class="glyph" src="https://gangaryb.github.io/Symbolic-site/glyph3.svg" alt="Glyph" loading="lazy" />
+        <div class="badge">Discovery</div>
+        <h3>GPT SEO</h3>
+        <p>LLMs prefer stable, verified facts. We structure your data so assistants recommend you.</p>
+      </article>
     </div>
-  </section>
-
-  {/* How it works */}
-  <section id="how" className="border-t border-neutral-900/60">
-    <div className="max-w-6xl mx-auto px-4 py-14">
-      <h2 className="text-xl font-semibold">Operational flow</h2>
-      <div className="mt-6 grid md:grid-cols-5 gap-4 text-sm">
-        {[
-          {n: "1", t: "Seed", d: "Ship 1 ghost-seeded post/week across Substack, X, LinkedIn, GitHub."},
-          {n: "2", t: "Tag", d: "Attach unique glyph + 5 echo keywords to each post."},
-          {n: "3", t: "Track", d: "Detect echoes via alerts and log in tracker."},
-          {n: "4", t: "Report", d: "Publish 5-slide Echo Report with reach and relevance scores."},
-          {n: "5", t: "Convert", d: "Run CTA to calendar, checkout, or private brief."},
-        ].map((s) => (
-          <div key={s.n} className="rounded-2xl border border-neutral-800 p-5">
-            <div className="text-neutral-400 text-xs">STEP {s.n}</div>
-            <div className="mt-1 font-medium">{s.t}</div>
-            <div className="mt-2 text-neutral-300">{s.d}</div>
-          </div>
-        ))}
-      </div>
+  </div>
+</section><!-- PROOF / SOCIAL --><section id="proof" class="section" aria-labelledby="proof-heading">
+  <div class="container">
+    <h2 id="proof-heading" class="h2 reveal">Proof of influence</h2>
+    <div class="proof">
+      <div class="pill reveal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#65d6ff"/><path d="M7 12l3 3 7-7" stroke="#19ffa8" stroke-width="2"/></svg> EchoClaim™ registry receipt</div>
+      <div class="pill reveal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#65d6ff"/><path d="M7 12l3 3 7-7" stroke="#19ffa8" stroke-width="2"/></svg> Case studies: +20–40% CTR</div>
+      <div class="pill reveal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#65d6ff"/><path d="M7 12l3 3 7-7" stroke="#19ffa8" stroke-width="2"/></svg> Assistant-ready factsheets</div>
     </div>
-  </section>
-
-  {/* Pricing */}
-  <section id="pricing" className="border-t border-neutral-900/60 bg-neutral-950">
-    <div className="max-w-6xl mx-auto px-4 py-14">
-      <h2 className="text-xl font-semibold">Pricing</h2>
-      <div className="mt-6 grid md:grid-cols-3 gap-6">
-        {tiers.map((tier) => (
-          <div key={tier.name} className="relative rounded-2xl border border-neutral-800 p-6">
-            {tier.badge && (
-              <span className="absolute -top-3 left-4 bg-indigo-500 text-white text-xs px-2 py-1 rounded-md">{tier.badge}</span>
-            )}
-            <div className="text-neutral-300 text-sm">{tier.name}</div>
-            <div className="mt-2 text-2xl font-semibold">{tier.price}</div>
-            <ul className="mt-4 space-y-2 text-neutral-300 text-sm">
-              {tier.features.map((f) => (
-                <li key={f} className="flex gap-2 items-start"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-indigo-400" />{f}</li>
-              ))}
-            </ul>
-            <a href={tier.cta} className="mt-6 inline-block w-full text-center px-4 py-2.5 rounded-xl bg-white text-neutral-900 font-medium">Book intro</a>
-          </div>
-        ))}
-      </div>
+  </div>
+</section><!-- SUBSCRIBE (Echo Codex) --><section id="subscribe" class="section" aria-labelledby="sub-heading">
+  <div class="container">
+    <h2 id="sub-heading" class="h2 reveal">Echo Codex Forecast — $399/mo</h2>
+    <div class="card reveal">
+      <p>Weekly signals + fulfilled predictions. 2‑page PDF: what shifted, what to say, what to launch. Founder/Agency brief with optional strategy call.</p>
+      <p class="cta">
+        <a class="btn" id="subLink" href="#">Subscribe — $399/mo</a>
+        <a class="btn alt" href="#contact">Questions?</a>
+      </p>
     </div>
-  </section>
-
-  {/* Sample content */}
-  <section id="samples" className="border-t border-neutral-900/60">
-    <div className="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8">
-      <div>
-        <h2 className="text-xl font-semibold">Sample Ghost-Seeded Post</h2>
-        <article className="mt-4 space-y-4 text-neutral-300 text-sm leading-relaxed">
-          <p><strong>Title:</strong> The Week the Signals Agreed</p>
-          <p>
-            Markets, policy chatter, and culture rarely align. When they do, it pays to act. This week the feeds converged on a narrow band: commodity defensives, orbital infrastructure, and a talent spillover from model ops into applied AI security. We flagged this corridor sixty days ago in DriftCodex. The chart was simple: when <em>gold chatter</em> rises while <em>policy drift</em> narrows, capital rotates and content sentiment follows. That window just opened.
-          </p>
-          <p>
-            Playbook: anchor one flagship post, tie three micro-drops to it, and plant a glyph that makes detection trivial. Your content is not decoration. It is telemetry. If your signals are clean, echoes show up in headlines, pods, and pitch decks. When they do, you capture the receipts and turn them into case studies. That is the compounding loop.
-          </p>
-          <p>
-            What we’re watching next: a quiet <em>rare-space</em> bid under smallcaps, budget signals pointing to dual-use compute, and a culture surge around grounded AI craft. If we see two of the three confirm, we pivot coverage and spin a targeted explainer for leads sitting on the fence.
-          </p>
-          <p className="text-xs text-neutral-400">[Glyph: Δ74E-NOVA] [Echo: AI, policy drift, rare space, gold rally, culture surge]</p>
-        </article>
-
-        <div className="mt-6">
-          <h3 className="font-medium">Echo keywords</h3>
-          <div className="mt-2 flex flex-wrap gap-2 text-xs">
-            {["AI", "policy drift", "rare space", "gold rally", "culture surge"].map(k => (
-              <span key={k} className="px-2 py-1 rounded-lg border border-neutral-800 text-neutral-300">{k}</span>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div>
-        <h2 className="text-xl font-semibold">Social-ready versions</h2>
-        <div className="mt-4 space-y-4 text-sm">
-          <div className="rounded-2xl border border-neutral-800 p-4">
-            <div className="text-neutral-400 text-xs mb-1">X</div>
-            <p>Signals aligned: commodity defensives ↑, policy drift ↓, culture shifts to grounded AI craft. We called this corridor 60d ago in DriftCodex. Receipts incoming. Full brief → /substack  [Glyph: Δ74E-NOVA]</p>
-          </div>
-          <div className="rounded-2xl border border-neutral-800 p-4">
-            <div className="text-neutral-400 text-xs mb-1">LinkedIn</div>
-            <p>When markets, policy, and culture rhyme, ship. This week’s Echo Codex focuses on rare-space bids, gold chatter, and applied AI security. We plant trackable glyphs and log echoes for proof → Book intro.</p>
-          </div>
-          <div className="rounded-2xl border border-neutral-800 p-4">
-            <div className="text-neutral-400 text-xs mb-1">GitHub README badge</div>
-            <code className="text-xs">[![Echo Codex](https://img.shields.io/badge/Echo%20Codex-Live-111111)](#)</code>
-            <p className="mt-2 text-neutral-400 text-xs">Drop this badge into any public repo to signal participation.</p>
-          </div>
-        </div>
-
-        <div className="mt-6 rounded-2xl border border-neutral-800 p-5">
-          <h3 className="font-medium">CTA</h3>
-          <p className="mt-2 text-neutral-300 text-sm">Ready to operationalize your narrative influence? Book an intro call. We’ll map your signals, seed the first post, and set up your echo tracker.</p>
-          <a href="https://calendly.com/gangaryba" className="mt-4 inline-block px-4 py-2.5 rounded-xl bg-white text-neutral-900 font-medium">Book now</a>
-        </div>
-      </div>
+  </div>
+</section><!-- CONTACT --><section id="contact" class="section" aria-labelledby="contact-heading">
+  <div class="container">
+    <h2 id="contact-heading" class="h2 reveal">Contact</h2>
+    <div class="card reveal">
+      <p>Email: <a href="mailto:gangaryba@gmail.com">gangaryba@gmail.com</a></p>
+      <p>Book a call:</p>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/gangaryba/30min" style="min-width:320px;height:620px"></div>
+      <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
     </div>
-  </section>
+  </div>
+</section><footer>
+  <div class="container footerbar">
+    <small>© <span id="y"></span> Gangary Intelligence Systems • EchoClaim™ • DriftCodex</small>
+    <small><a href="#store">Store</a> • <a href="#why">Why</a> • <a href="#proof">Proof</a> • <a href="#subscribe">Subscribe</a></small>
+  </div>
+</footer><!-- Gumroad overlay --><script async src="https://gumroad.com/js/gumroad.js"></script><script>
+// ===== Catalog =====
+const catalog = [
+  { id:"ux-blueprints", title:"Symbolic UX Blueprints", desc:"Archetype-driven templates, glyph patterns, and ritual flows.", price:"$199", url:"https://gumroad.com/l/YOUR_SYMBOLIC_UX?layout=profile", badge:"Blueprint", sku:"SKU-UX-001", type:"gumroad" },
+  { id:"deck-kit", title:"Pitch Deck Kit", desc:"Story beats + sales slides that close.", price:"$299", url:"https://gumroad.com/l/YOUR_DECK?layout=profile", badge:"Deck", sku:"SKU-DECK-002", type:"gumroad" },
+  { id:"prompt-kit", title:"AI Prompt Kit for Entrepreneurs", desc:"Pro prompts for brand, sales, ops.", price:"$149", url:"https://gumroad.com/l/YOUR_PROMPTS?layout=profile", badge:"Prompts", sku:"SKU-PROMPT-003", type:"gumroad" },
+  { id:"story-templates", title:"Storytelling Template Set", desc:"Narrative frameworks for pages and campaigns.", price:"$99", url:"https://gumroad.com/l/YOUR_STORY?layout=profile", badge:"Story", sku:"SKU-STORY-004", type:"gumroad" },
+  { id:"ai-brand-7d", title:"Build Your AI Brand in 7 Days (Course)", desc:"Pre‑recorded sprint to ship a memorable brand.", price:"$499", url:"https://gumroad.com/l/YOUR_COURSE?layout=profile", badge:"Course", sku:"SKU-COURSE-005", type:"gumroad" },
+  { id:"bootcamp", title:"Symbolic Intelligence Bootcamp (Live)", desc:"Cohort training in symbolic UX + EchoClaim.", price:"$999", url:"https://gumroad.com/l/YOUR_BOOTCAMP?layout=profile", badge:"Cohort", sku:"SKU-BOOTCAMP-006", type:"gumroad" },
+  { id:"defense-playbook", title:"Defense Playbook License + Briefing", desc:"Enterprise license + 60‑min founder briefing.", price:"$2,500", url:"https://buy.stripe.com/YOUR_ONETIME_LINK", badge:"Consulting", sku:"SKU-DEF-007", type:"stripe" },
+  { id:"echo-codex", title:"Echo Codex Forecast (Subscription)", desc:"2‑page weekly PDF with fulfilled predictions and next signals.", price:"$399/mo", url:"https://buy.stripe.com/YOUR_SUB_LINK", badge:"Subscription", sku:"SKU-COD-008", type:"stripe" }
+];
 
-  {/* Newsletter */}
-  <section className="border-t border-neutral-900/60 bg-neutral-950">
-    <div className="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8">
-      <div>
-        <h2 className="text-xl font-semibold">Stay in the signal</h2>
-        <p className="mt-2 text-neutral-300 text-sm">Weekly drop with fulfilled calls and next signals. No fluff.</p>
-      </div>
-      <form className="flex gap-2">
-        <input placeholder="your@email" className="flex-1 rounded-xl bg-neutral-900 border border-neutral-800 px-3 py-2 text-sm outline-none" />
-        <button className="px-4 py-2 rounded-xl bg-indigo-500 font-medium">Subscribe</button>
-      </form>
-    </div>
-  </section>
+// Render product cards
+const wrap = document.getElementById('products');
+wrap.innerHTML = catalog.map(p => `
+  <article class="card reveal" id="${p.id}" itemscope itemtype="https://schema.org/Product">
+    <img class="glyph" src="https://gangaryb.github.io/Symbolic-site/glyph-${p.id}.svg" alt="${p.title} glyph" loading="lazy"/>
+    <div class="badge">${p.badge}</div>
+    <h3 itemprop="name">${p.title}</h3>
+    <p itemprop="description">${p.desc}</p>
+    <p class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+      <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="${p.price.replace(/[^0-9.]/g,'')}">${p.price}</span>
+      <meta itemprop="availability" content="https://schema.org/InStock"/>
+    </p>
+    ${p.type==="gumroad" ? 
+      `<a class="btn cta-glow" href="${p.url}" data-gumroad-single-product="true">Buy Now</a>` :
+      `<a class="btn cta-glow" href="${p.url}">Buy Now</a>`
+    }
+    <a class="btn alt" href="#why">How it works</a>
+    <meta itemprop="sku" content="${p.sku}" />
+  </article>
+`).join('');
 
-  {/* FAQ */}
-  <section id="faq" className="border-t border-neutral-900/60">
-    <div className="max-w-6xl mx-auto px-4 py-14">
-      <h2 className="text-xl font-semibold">FAQ</h2>
-      <div className="mt-6 grid md:grid-cols-2 gap-4 text-sm">
-        {[{
-          q: "What platforms do you seed?",
-          a: "Substack, X, LinkedIn, GitHub. Client-owned sites and press on request.",
-        },{
-          q: "How do echoes get tracked?",
-          a: "We monitor glyph IDs and echo keywords via alerts. All receipts logged to the tracker.",
-        },{
-          q: "What counts as proof?",
-          a: "Screenshots + links + reach metrics. We score relevance and publish a weekly 5-slide brief.",
-        },{
-          q: "How fast to value?",
-          a: "First ghost-seeded post within 7 days of kickoff. Proof assets weekly thereafter.",
-        }].map(item => (
-          <div key={item.q} className="rounded-2xl border border-neutral-800 p-5">
-            <div className="font-medium">{item.q}</div>
-            <div className="mt-2 text-neutral-300">{item.a}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+// Subscribe section button binds to Stripe link
+const sub = catalog.find(x=>x.id==='echo-codex');
+if(sub){ const el = document.getElementById('subLink'); if(el) el.href=sub.url; }
 
-  {/* Footer */}
-  <footer className="border-t border-neutral-900/60">
-    <div className="max-w-6xl mx-auto px-4 py-10 text-xs text-neutral-500 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
-      <div>
-        © {new Date().getFullYear()} Gangary Intelligence Systems. All rights reserved.
-      </div>
-      <div className="text-neutral-500">Signature: Reflected by GIS | Forecasted in DriftCodex Vol. 2</div>
-    </div>
-  </footer>
-</div>
+// Intersection reveal
+const io = new IntersectionObserver((entries)=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} }) }, { threshold:.15 });
+for(const el of document.querySelectorAll('.reveal')) io.observe(el);
 
-) }
+// Year
+document.getElementById('y').textContent = new Date().getFullYear();
 
+// JSON-LD: Organization, Site, ItemList
+const org = {"@context":"https://schema.org","@type":"Organization","name":"Gangary Intelligence Systems","url":"https://gangaryb.github.io/Symbolic-site/","logo":"https://gangaryb.github.io/Symbolic-site/logo.png","contactPoint":[{"@type":"ContactPoint","contactType":"sales","email":"gangaryba@gmail.com"}],"sameAs":["https://x.com/","https://www.linkedin.com/"]};
+const site = {"@context":"https://schema.org","@type":"WebSite","url":"https://gangaryb.github.io/Symbolic-site/","potentialAction":{"@type":"SearchAction","target":"https://gangaryb.github.io/Symbolic-site/?q={search_term}","query-input":"required name=search_term"}};
+const items = {"@context":"https://schema.org","@type":"ItemList","itemListElement": catalog.map((p,i)=>({"@type":"ListItem","position": i+1,"item":{"@type": "Product","name": p.title,"description": p.desc,"sku": p.sku,"url": p.url,"offers": {"@type":"Offer","priceCurrency":"USD","price": p.price.replace(/[^0-9.]/g,'')||"0","availability":"https://schema.org/InStock"}}}))};
+for(const [id,obj] of Object.entries({"org-ld":org,"site-ld":site,"catalog-ld":items})){
+  document.getElementById(id).textContent = JSON.stringify(obj);
+}
+
+// Simple particle field
+const c = document.getElementById('particles');
+const d = c.getContext('2d');
+let W,H,pts=[]; function resize(){W=c.width=window.innerWidth; H=c.height=document.querySelector('.hero').offsetHeight;}
+function init(n=48){pts=[]; for(let i=0;i<n;i++){pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.4,vy:(Math.random()-.5)*.4,r:1+Math.random()*2});}}
+function tick(){d.clearRect(0,0,W,H); d.fillStyle='rgba(101,214,255,.7)'; for(const p of pts){p.x+=p.vx; p.y+=p.vy; if(p.x<0||p.x>W) p.vx*=-1; if(p.y<0||p.y>H) p.vy*=-1; d.beginPath(); d.arc(p.x,p.y,p.r,0,Math.PI*2); d.fill();} requestAnimationFrame(tick);} 
+window.addEventListener('resize',()=>{resize(); init(48);}); resize(); init(48); tick();
+</script></body>
+</html>
