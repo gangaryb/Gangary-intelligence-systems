@@ -1,377 +1,207 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>GIS — Symbolic Marketing, EchoClaim™ & GPT SEO</title>
-<meta name="description" content="We turn ideas into protected, market-ready assets: symbolic branding, EchoClaim™ proof-of-origin, and GPT SEO so AI assistants recommend you." />
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+export default function Site() { const tiers = [ { name: "Founder Brief", price: "$399/mo", features: [ "Echo Codex Weekly (2-page PDF)", "1 Ghost-Seeded post/mo", "Echo keyword map", "Email support" ], cta: "https://calendly.com/gangaryba", }, { name: "Operator Pro", price: "$999/mo", features: [ "Everything in Founder Brief", "4 Ghost-Seeded posts/mo", "Weekly Echo Report (5 slides)", "Monthly 1:1 strategy call" ], cta: "https://calendly.com/gangaryba", badge: "Most Popular", }, { name: "Enterprise", price: "Custom", features: [ "Dedicated analyst", "Pipeline integration", "Private dashboards", "Quarterly executive review" ], cta: "https://calendly.com/gangaryba", }, ]
 
-<!-- Open Graph / Twitter -->
-<meta property="og:title" content="GIS — Symbolic Marketing, EchoClaim™ & GPT SEO" />
-<meta property="og:description" content="Brand systems, EchoClaim™ IP protection, and GPT SEO so ChatGPT/Claude recommend you." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://YOURDOMAIN.com/" />
-<meta property="og:image" content="https://YOURDOMAIN.com/og-image.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
+return ( <div className="min-h-screen bg-neutral-950 text-neutral-100"> {/* Nav */} <header className="sticky top-0 z-20 backdrop-blur border-b border-neutral-800/80 bg-neutral-950/70"> <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between"> <div className="flex items-center gap-2"> <div className="h-7 w-7 rounded-xl bg-gradient-to-tr from-indigo-500 to-cyan-400" /> <span className="font-semibold tracking-tight">Gangary Intelligence Systems</span> </div> <nav className="hidden md:flex items-center gap-6 text-sm text-neutral-300"> <a href="#why" className="hover:text-white">Why</a> <a href="#how" className="hover:text-white">How it works</a> <a href="#pricing" className="hover:text-white">Pricing</a> <a href="#samples" className="hover:text-white">Samples</a> <a href="#faq" className="hover:text-white">FAQ</a> </nav> <a href="https://calendly.com/gangaryba" className="px-3 py-2 rounded-xl bg-white text-neutral-900 text-sm font-medium">Book a call</a> </div> </header>
 
-<style>
-:root{
-  --bg:#070a12; --panel:#0e1526; --line:#1f2b45; --text:#e9eef8; --muted:#a6b4d1;
-  --brand:#65d6ff; --brand2:#19ffa8; --ok:#19ffa8; --shadow:0 8px 40px rgba(0,0,0,.35)
-}
-*{box-sizing:border-box}
-html,body{margin:0;background:radial-gradient(1200px 800px at 10% -20%,#0b1430 0%,#070a12 60%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif}
-a{color:var(--brand);text-decoration:none}
-img{max-width:100%;height:auto}
-.container{max-width:1120px;margin:0 auto;padding:0 20px}
-.nav{position:sticky;top:0;z-index:20;background:rgba(7,10,18,.55);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-.nav a{color:var(--text);opacity:.9;margin-left:20px}
-.nav a:hover{opacity:1}
-.logo{font-weight:800;letter-spacing:.2px}
-.hero{padding:72px 0 40px}
-.kicker{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
-h1{font-size:44px;line-height:1.08;margin:10px 0 14px}
-.sub{color:var(--muted);font-size:18px;max-width:780px}
-.cta{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 18px;border-radius:12px;background:linear-gradient(90deg,var(--brand),var(--brand2));color:#041018;font-weight:800;box-shadow:var(--shadow)}
-.btn.alt{background:transparent;border:1px solid var(--line);color:var(--text)}
-.band{margin-top:14px;color:var(--muted);font-size:12px}
-.section{padding:56px 0;border-top:1px solid var(--line)}
-.h2{font-size:28px;margin:0 0 18px}
-.grid{display:grid;gap:16px}
-.cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.card{background:linear-gradient(180deg,#0e1526 0%, #0a1120 100%);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
-.card h3{margin:0 0 6px}
-.badge{display:inline-block;font-size:12px;padding:6px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);margin-bottom:8px}
-.list{line-height:1.9;color:var(--text)}
-.pack{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-.price{font-weight:800;font-size:18px}
-.details{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0c1324}
-details{border-top:1px solid var(--line)}
-details:first-child{border-top:none}
-summary{cursor:pointer;padding:14px 16px;color:var(--text);list-style:none}
-summary::-webkit-details-marker{display:none}
-.panel{padding:0 16px 16px 16px;color:var(--muted)}
-.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-.kpi .cell{background:#0f1a38;border:1px solid #223265;border-radius:10px;padding:12px}
-.kpi strong{font-size:18px;color:var(--ok)}
-.quote{font-style:italic;color:#dbe6ff}
-.footerbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between}
-small{color:var(--muted)}
-.sticky-cta{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:30;background:rgba(14,21,38,.9);border:1px solid var(--line);border-radius:999px;padding:8px 12px;display:flex;gap:10px;backdrop-filter:blur(10px)}
-html{scroll-behavior:smooth}
-input,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #25345f;background:#0b1430;color:var(--text)}
-label{font-size:14px;color:var(--muted);display:block}
-.form-row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
-.form-row-1{display:grid;gap:12px;grid-template-columns:1fr}
-</style>
-
-<!-- JSON-LD: Organization + FAQ for SEO -->
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"Gangary Intelligence Systems",
-  "url":"https://YOURDOMAIN.com",
-  "logo":"https://YOURDOMAIN.com/logo.png",
-  "sameAs":["https://www.linkedin.com/in/YOURPROFILE","https://x.com/YOURHANDLE"],
-  "contactPoint":[{"@type":"ContactPoint","contactType":"sales","telephone":"+1-347-260-4290","email":"gangaryba@gmail.com"}]
-}
-</script>
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [{
-   "@type": "Question",
-   "name": "What is EchoClaim™?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "EchoClaim™ is our proof-of-origin system: timestamp, hash, watermark, and fingerprint that link your work back to you. It supports your IP claims and complements formal copyright/trademark/patents."
-   }
- },{
-   "@type": "Question",
-   "name": "What is GPT SEO?",
-   "acceptedAnswer": {
-     "@type": "Answer",
-     "text": "We optimize your brand so AI assistants (ChatGPT, Claude, Gemini) recognize and recommend you. Think of it as SEO for large language models."
-   }
- }]
-}
-</script>
-</head>
-<body>
-
-<!-- NAV -->
-<div class="nav">
-  <div class="container nav-inner">
-    <div class="logo">GIS • Symbolic</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#why">Why GIS</a>
-      <a href="#packages">Packages</a>
-      <a href="#work">Work</a>
-      <a href="#learn-more">Learn More</a>
-      <a href="#book">Book</a>
-      <a href="#contact">Contact</a>
-      <a href="#faq">FAQ</a>
-    </nav>
-  </div>
-</div>
-
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="container">
-    <div class="kicker">Symbolic Marketing • EchoClaim™ • GPT SEO</div>
-    <h1>Be remembered. Get copied less. Sell faster.</h1>
-    <p class="sub">We build clear brand systems, write sales-ready story, protect your IP with EchoClaim™, and make AI assistants recommend you with GPT SEO.</p>
-    <div class="cta">
-      <a class="btn" href="#packages">See Packages</a>
-      <a class="btn alt" href="#book">Book a 30-min call →</a>
-      <a class="btn alt" href="tel:+13472604290">Call now: +1 347 260 4290</a>
-    </div>
-    <div class="band">Reflected by GIS • EchoClaim #ECL-001 • Sovereign Stack</div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="section">
-  <div class="container">
-    <h2 class="h2">What we deliver (simple + fast)</h2>
-    <div class="grid cards">
-      <div class="card">
-        <div class="badge">Brand</div>
-        <h3>Symbolic Branding</h3>
-        <p>Archetype + glyph + tone. One spine for website, deck, product, and ads.</p>
-        <ul class="list"><li>Logo/glyph set (SVG)</li><li>Color & tone rules</li><li>Messaging pillars</li></ul>
-      </div>
-      <div class="card">
-        <div class="badge">Story</div>
-        <h3>Narrative Marketing</h3>
-        <p>Short copy that makes decisions easy: homepage, pitch deck beats, and sales scripts.</p>
-        <ul class="list"><li>Homepage copy</li><li>Deck storyline</li><li>Objection handlers</li></ul>
-      </div>
-      <div class="card">
-        <div class="badge">Protection</div>
-        <h3>EchoClaim™ IP</h3>
-        <p>Symbolic + forensic copyright: timestamp, hash, watermark, fingerprint—proof you made it first.</p>
-        <ul class="list"><li>Claim ID + manifest</li><li>Watermarked assets</li><li>Registry receipt</li></ul>
-      </div>
-      <div class="card">
-        <div class="badge">AI Discovery</div>
-        <h3>GPT SEO</h3>
-        <p>We tune your brand so AI assistants (ChatGPT, Claude, Gemini) recognize and recommend you.</p>
-        <ul class="list"><li>Assistant profiles</li><li>Answer frameworks</li><li>LLM-safe factsheet</li></ul>
-      </div>
-      <div class="card">
-        <div class="badge">Timing</div>
-        <h3>Drift Forecasts</h3>
-        <p>Quarterly language trends and campaign timing so you arrive early and relevant.</p>
-        <ul class="list"><li>Trend map</li><li>Recommended phrases</li><li>Launch calendar</li></ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY -->
-<section id="why" class="section">
-  <div class="container">
-    <h2 class="h2">Why teams pick GIS</h2>
-    <div class="kpi">
-      <div class="cell"><strong>↑ Faster Sales</strong><div>Shorter pages. Clearer pitch. Fewer objections.</div></div>
-      <div class="cell"><strong>↑ Brand Recall</strong><div>Memorable glyphs + plain language.</div></div>
-      <div class="cell"><strong>↑ IP Confidence</strong><div>Proof-of-origin you can point to.</div></div>
-      <div class="cell"><strong>↑ AI Visibility</strong><div>GPT SEO so assistants surface you first.</div></div>
-    </div>
-
-    <div class="details" style="margin-top:16px">
-      <details open>
-        <summary>What is Symbolic Marketing?</summary>
-        <div class="panel">A practical system that locks your look, voice, and story—so every touchpoint is consistent and easy to ship.</div>
-      </details>
-      <details>
-        <summary>What is GPT SEO?</summary>
-        <div class="panel">We engineer your presence and language so AI assistants recommend you. Think search engine optimization, but for LLMs.</div>
-      </details>
-      <details>
-        <summary>How we work</summary>
-        <div class="panel"><ol><li>30–45 min kickoff</li><li>Draft brand spine + homepage story</li><li>Revise together, apply EchoClaim™, deliver assets</li></ol></div>
-      </details>
-      <details>
-        <summary>What you receive</summary>
-        <div class="panel">Brand spine (PDF), glyphs (SVG/PNG), homepage copy, deck outline, EchoClaim manifest, and 30-day tune-up.</div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- PACKAGES -->
-<section id="packages" class="section">
-  <div class="container">
-    <h2 class="h2">Packages</h2>
-    <div class="pack">
-      <div class="card">
-        <div class="badge">Starter</div>
-        <h3>Symbolic Sprint</h3>
-        <p class="price">$2,000 • 2 weeks</p>
-        <ul class="list"><li>Archetype + core glyph</li><li>Homepage story</li><li>EchoClaim applied</li></ul>
-        <p class="cta">
-          <a class="btn" href="https://gum.co/placeholder" target="_blank" rel="noopener">Buy Starter</a>
-          <a class="btn alt" id="emailStarter" href="#">Ask a question</a>
+{/* Hero */}
+  <section className="relative overflow-hidden">
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-700/20 via-transparent to-transparent" />
+    <div className="max-w-6xl mx-auto px-4 py-16 md:py-24">
+      <div className="max-w-3xl">
+        <h1 className="text-3xl md:text-5xl font-semibold leading-tight tracking-tight">
+          Ghost-Seeded Content + Echo Codex
+        </h1>
+        <p className="mt-4 text-neutral-300 md:text-lg">
+          Automate narrative influence. Log echoes. Convert proof into pipeline. Your DriftCodex edge, operationalized.
         </p>
-      </div>
-      <div class="card">
-        <div class="badge">Pro</div>
-        <h3>Launch System</h3>
-        <p class="price">$8,000 • 4–6 weeks</p>
-        <ul class="list"><li>Full brand spine + glyph set</li><li>Website story (5 pages) + deck beats</li><li>EchoClaim pack + registry</li></ul>
-        <p class="cta"><a class="btn alt" id="emailPro" href="#">Book scope call</a></p>
-      </div>
-      <div class="card">
-        <div class="badge">Lab</div>
-        <h3>Symbolic Lab</h3>
-        <p class="price">$25,000 • 8–12 weeks</p>
-        <ul class="list"><li>Advanced glyph language</li><li>Multi-channel story + campaigns</li><li>Quarterly drift + training</li></ul>
-        <p class="cta"><a class="btn alt" id="emailLab" href="#">Apply</a></p>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <a href="https://calendly.com/gangaryba" className="px-5 py-3 rounded-xl bg-indigo-500 text-white font-medium">Launch intro call</a>
+          <a href="#samples" className="px-5 py-3 rounded-xl border border-neutral-700 text-neutral-200 font-medium">See live samples</a>
+        </div>
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 text-xs text-neutral-400">
+          {["Forecast-grade", "Glyph-tagged", "Echo-tracked", "Lead-ready"].map((k) => (
+            <div key={k} className="rounded-lg border border-neutral-800 px-3 py-2 text-center">{k}</div>
+          ))}
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- WORK / TESTIMONIALS -->
-<section id="work" class="section">
-  <div class="container">
-    <h2 class="h2">Results & testimonials</h2>
-    <div class="grid cards">
-      <div class="card">
-        <h3>Fintech (B2B)</h3>
-        <p>Before: feature soup. After: Mentor archetype + 3-step story. Demo→deal up 31%.</p>
+  {/* Why */}
+  <section id="why" className="border-t border-neutral-900/60 bg-neutral-950">
+    <div className="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-3 gap-8">
+      <div className="md:col-span-1">
+        <h2 className="text-xl font-semibold">Why this wins</h2>
+        <p className="mt-2 text-neutral-300">Proven prediction trail + measurable echo drift = compounding authority and revenue.</p>
       </div>
-      <div class="card">
-        <h3>Healthtech</h3>
-        <p>Before: tool vendor. After: Caregiver narrative. Trust signals + shorter pages.</p>
-      </div>
-      <div class="card">
-        <h3>Creator brand</h3>
-        <p>Glyph language + newsletter storyline. CTR up 22% in 6 weeks.</p>
-      </div>
-      <div class="card">
-        <p class="quote">“Before GIS, our brand was invisible. Now, AI assistants actually recommend our product. Sales grew 320% in three months.”</p>
-        <strong>— L. Howard, Founder</strong>
-      </div>
-      <div class="card">
-        <p class="quote">“GPT SEO changed our funnel. We thought Google was everything—until GIS tuned us for LLMs. We’re ahead of the curve.”</p>
-        <strong>— K. Reynolds, Marketing Director</strong>
+      <div className="md:col-span-2 grid sm:grid-cols-2 gap-6">
+        {[
+          {t: "DriftCodex Advantage", d: "Your fulfilled predictions become assets. We package them into repeatable proof."},
+          {t: "Ghost Seeding", d: "Glyph-tagged content plants detectable signals across platforms for later capture."},
+          {t: "Echo Reports", d: "Weekly 5-slide briefs turn proof into sales collateral and investor updates."},
+          {t: "Pipeline Lift", d: "CTAs route to calls, demos, or subscriptions. From views to booked revenue."},
+        ].map((b) => (
+          <div key={b.t} className="rounded-2xl border border-neutral-800 p-5">
+            <h3 className="font-medium">{b.t}</h3>
+            <p className="mt-2 text-neutral-300 text-sm">{b.d}</p>
+          </div>
+        ))}
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- LEARN MORE (lead form) -->
-<section id="learn-more" class="section">
-  <div class="container">
-    <h2 class="h2">Learn More</h2>
-    <p class="sub" style="margin:6px 0 18px">Tell us how to reach you. We’ll send a one-page plan and next steps.</p>
-
-    <!-- Netlify (data-netlify) or Formspree (swap action) -->
-    <form name="learn-more" method="POST" data-netlify="true" class="card" style="padding:16px; max-width:760px">
-      <input type="hidden" name="form-name" value="learn-more" />
-      <div class="form-row">
-        <label>Name <input name="name" required placeholder="Your name" /></label>
-        <label>Email <input name="email" type="email" required placeholder="you@example.com" /></label>
+  {/* How it works */}
+  <section id="how" className="border-t border-neutral-900/60">
+    <div className="max-w-6xl mx-auto px-4 py-14">
+      <h2 className="text-xl font-semibold">Operational flow</h2>
+      <div className="mt-6 grid md:grid-cols-5 gap-4 text-sm">
+        {[
+          {n: "1", t: "Seed", d: "Ship 1 ghost-seeded post/week across Substack, X, LinkedIn, GitHub."},
+          {n: "2", t: "Tag", d: "Attach unique glyph + 5 echo keywords to each post."},
+          {n: "3", t: "Track", d: "Detect echoes via alerts and log in tracker."},
+          {n: "4", t: "Report", d: "Publish 5-slide Echo Report with reach and relevance scores."},
+          {n: "5", t: "Convert", d: "Run CTA to calendar, checkout, or private brief."},
+        ].map((s) => (
+          <div key={s.n} className="rounded-2xl border border-neutral-800 p-5">
+            <div className="text-neutral-400 text-xs">STEP {s.n}</div>
+            <div className="mt-1 font-medium">{s.t}</div>
+            <div className="mt-2 text-neutral-300">{s.d}</div>
+          </div>
+        ))}
       </div>
-      <div class="form-row">
-        <label>Phone (optional) <input name="phone" type="tel" placeholder="+1 347 260 4290" /></label>
-        <label>Company (optional) <input name="company" placeholder="Company" /></label>
-      </div>
-      <div class="form-row-1">
-        <label>What do you need?
-          <textarea name="message" rows="5" placeholder="Brand help, EchoClaim, GPT SEO, timelines…" required></textarea>
-        </label>
-      </div>
-      <div class="cta" style="margin-top:14px">
-        <button class="btn" type="submit">Send</button>
-        <a class="btn alt" id="emailLearn" href="#">Email instead</a>
-      </div>
-      <p class="band" style="margin-top:10px">We respond within 1 business day. Your info stays private.</p>
-    </form>
-  </div>
-</section>
-
-<!-- BOOKING (Calendly) -->
-<section id="book" class="section">
-  <div class="container">
-    <h2 class="h2">Book a 30-min Call</h2>
-    <p class="sub" style="margin:6px 0 18px">Pick a time that works. We’ll review goals and recommend the best package.</p>
-    <div class="card" style="padding:0; overflow:hidden">
-      <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR_HANDLE/30min" style="min-width:320px;height:680px;border:0"></div>
     </div>
-    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <p class="band" style="margin-top:12px">Prefer email or phone?
-      <a id="emailBtn" href="#">Email us</a> or call <a href="tel:+13472604290">+1 347 260 4290</a>.
-    </p>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <div class="container">
-    <h2 class="h2">Contact</h2>
-    <p><strong>Email:</strong> <a id="emailFooter" href="#">Send an email</a> &nbsp;•&nbsp; <strong>Phone:</strong> <a href="tel:+13472604290">+1&nbsp;347&nbsp;260&nbsp;4290</a></p>
-    <p class="band">Client assets remain yours. Our symbolic methods + protection stack remain GIS IP.</p>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq" class="section">
-  <div class="container">
-    <h2 class="h2">FAQ</h2>
-    <div class="card">
-      <h3>What is EchoClaim™?</h3>
-      <p>Forensic proof-of-origin (timestamp, hash, watermark, fingerprint) that links your work back to you. It supports legal claims and complements formal IP filings.</p>
-      <h3>What is GPT SEO?</h3>
-      <p>We optimize your presence so AI assistants (ChatGPT, Claude, Gemini) recognize and recommend your brand—SEO for large language models.</p>
-      <h3>Do you replace my marketing agency?</h3>
-      <p>No—we give you the brand spine, story, and AI discoverability that make every channel perform better.</p>
+  {/* Pricing */}
+  <section id="pricing" className="border-t border-neutral-900/60 bg-neutral-950">
+    <div className="max-w-6xl mx-auto px-4 py-14">
+      <h2 className="text-xl font-semibold">Pricing</h2>
+      <div className="mt-6 grid md:grid-cols-3 gap-6">
+        {tiers.map((tier) => (
+          <div key={tier.name} className="relative rounded-2xl border border-neutral-800 p-6">
+            {tier.badge && (
+              <span className="absolute -top-3 left-4 bg-indigo-500 text-white text-xs px-2 py-1 rounded-md">{tier.badge}</span>
+            )}
+            <div className="text-neutral-300 text-sm">{tier.name}</div>
+            <div className="mt-2 text-2xl font-semibold">{tier.price}</div>
+            <ul className="mt-4 space-y-2 text-neutral-300 text-sm">
+              {tier.features.map((f) => (
+                <li key={f} className="flex gap-2 items-start"><span className="mt-1 h-1.5 w-1.5 rounded-full bg-indigo-400" />{f}</li>
+              ))}
+            </ul>
+            <a href={tier.cta} className="mt-6 inline-block w-full text-center px-4 py-2.5 rounded-xl bg-white text-neutral-900 font-medium">Book intro</a>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="container footerbar">
-    <small>Reflected by GIS • EchoClaim #ECL-001 • DriftCodex</small>
-    <small><a href="#home">Back to top</a></small>
-  </div>
-</footer>
+  {/* Sample content */}
+  <section id="samples" className="border-t border-neutral-900/60">
+    <div className="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8">
+      <div>
+        <h2 className="text-xl font-semibold">Sample Ghost-Seeded Post</h2>
+        <article className="mt-4 space-y-4 text-neutral-300 text-sm leading-relaxed">
+          <p><strong>Title:</strong> The Week the Signals Agreed</p>
+          <p>
+            Markets, policy chatter, and culture rarely align. When they do, it pays to act. This week the feeds converged on a narrow band: commodity defensives, orbital infrastructure, and a talent spillover from model ops into applied AI security. We flagged this corridor sixty days ago in DriftCodex. The chart was simple: when <em>gold chatter</em> rises while <em>policy drift</em> narrows, capital rotates and content sentiment follows. That window just opened.
+          </p>
+          <p>
+            Playbook: anchor one flagship post, tie three micro-drops to it, and plant a glyph that makes detection trivial. Your content is not decoration. It is telemetry. If your signals are clean, echoes show up in headlines, pods, and pitch decks. When they do, you capture the receipts and turn them into case studies. That is the compounding loop.
+          </p>
+          <p>
+            What we’re watching next: a quiet <em>rare-space</em> bid under smallcaps, budget signals pointing to dual-use compute, and a culture surge around grounded AI craft. If we see two of the three confirm, we pivot coverage and spin a targeted explainer for leads sitting on the fence.
+          </p>
+          <p className="text-xs text-neutral-400">[Glyph: Δ74E-NOVA] [Echo: AI, policy drift, rare space, gold rally, culture surge]</p>
+        </article>
 
-<!-- sticky buy/email bar -->
-<div class="sticky-cta">
-  <a class="btn" href="#packages">See Packages</a>
-  <a class="btn alt" href="#learn-more">Learn More</a>
-  <a class="btn alt" href="#book">Book a Call</a>
+        <div className="mt-6">
+          <h3 className="font-medium">Echo keywords</h3>
+          <div className="mt-2 flex flex-wrap gap-2 text-xs">
+            {["AI", "policy drift", "rare space", "gold rally", "culture surge"].map(k => (
+              <span key={k} className="px-2 py-1 rounded-lg border border-neutral-800 text-neutral-300">{k}</span>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-xl font-semibold">Social-ready versions</h2>
+        <div className="mt-4 space-y-4 text-sm">
+          <div className="rounded-2xl border border-neutral-800 p-4">
+            <div className="text-neutral-400 text-xs mb-1">X</div>
+            <p>Signals aligned: commodity defensives ↑, policy drift ↓, culture shifts to grounded AI craft. We called this corridor 60d ago in DriftCodex. Receipts incoming. Full brief → /substack  [Glyph: Δ74E-NOVA]</p>
+          </div>
+          <div className="rounded-2xl border border-neutral-800 p-4">
+            <div className="text-neutral-400 text-xs mb-1">LinkedIn</div>
+            <p>When markets, policy, and culture rhyme, ship. This week’s Echo Codex focuses on rare-space bids, gold chatter, and applied AI security. We plant trackable glyphs and log echoes for proof → Book intro.</p>
+          </div>
+          <div className="rounded-2xl border border-neutral-800 p-4">
+            <div className="text-neutral-400 text-xs mb-1">GitHub README badge</div>
+            <code className="text-xs">[![Echo Codex](https://img.shields.io/badge/Echo%20Codex-Live-111111)](#)</code>
+            <p className="mt-2 text-neutral-400 text-xs">Drop this badge into any public repo to signal participation.</p>
+          </div>
+        </div>
+
+        <div className="mt-6 rounded-2xl border border-neutral-800 p-5">
+          <h3 className="font-medium">CTA</h3>
+          <p className="mt-2 text-neutral-300 text-sm">Ready to operationalize your narrative influence? Book an intro call. We’ll map your signals, seed the first post, and set up your echo tracker.</p>
+          <a href="https://calendly.com/gangaryba" className="mt-4 inline-block px-4 py-2.5 rounded-xl bg-white text-neutral-900 font-medium">Book now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Newsletter */}
+  <section className="border-t border-neutral-900/60 bg-neutral-950">
+    <div className="max-w-6xl mx-auto px-4 py-14 grid md:grid-cols-2 gap-8">
+      <div>
+        <h2 className="text-xl font-semibold">Stay in the signal</h2>
+        <p className="mt-2 text-neutral-300 text-sm">Weekly drop with fulfilled calls and next signals. No fluff.</p>
+      </div>
+      <form className="flex gap-2">
+        <input placeholder="your@email" className="flex-1 rounded-xl bg-neutral-900 border border-neutral-800 px-3 py-2 text-sm outline-none" />
+        <button className="px-4 py-2 rounded-xl bg-indigo-500 font-medium">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  {/* FAQ */}
+  <section id="faq" className="border-t border-neutral-900/60">
+    <div className="max-w-6xl mx-auto px-4 py-14">
+      <h2 className="text-xl font-semibold">FAQ</h2>
+      <div className="mt-6 grid md:grid-cols-2 gap-4 text-sm">
+        {[{
+          q: "What platforms do you seed?",
+          a: "Substack, X, LinkedIn, GitHub. Client-owned sites and press on request.",
+        },{
+          q: "How do echoes get tracked?",
+          a: "We monitor glyph IDs and echo keywords via alerts. All receipts logged to the tracker.",
+        },{
+          q: "What counts as proof?",
+          a: "Screenshots + links + reach metrics. We score relevance and publish a weekly 5-slide brief.",
+        },{
+          q: "How fast to value?",
+          a: "First ghost-seeded post within 7 days of kickoff. Proof assets weekly thereafter.",
+        }].map(item => (
+          <div key={item.q} className="rounded-2xl border border-neutral-800 p-5">
+            <div className="font-medium">{item.q}</div>
+            <div className="mt-2 text-neutral-300">{item.a}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Footer */}
+  <footer className="border-t border-neutral-900/60">
+    <div className="max-w-6xl mx-auto px-4 py-10 text-xs text-neutral-500 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+      <div>
+        © {new Date().getFullYear()} Gangary Intelligence Systems. All rights reserved.
+      </div>
+      <div className="text-neutral-500">Signature: Reflected by GIS | Forecasted in DriftCodex Vol. 2</div>
+    </div>
+  </footer>
 </div>
 
-<script>
-// Prefilled email helper — all buttons open a composed email to you
-const YOUR_EMAIL = "gangaryba@gmail.com";
-function mailto(subject, body){
-  return `mailto:${encodeURIComponent(YOUR_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-}
-function setEmailLink(id, subject, body){
-  const el = document.getElementById(id);
-  if (el) el.href = mailto(subject, body);
-}
-setEmailLink("emailStarter","Question about Symbolic Sprint","Hi GIS,\n\nI’m interested in the $2,000 Symbolic Sprint.\nCompany:\nWebsite:\nMain product:\nDesired launch date:\n\nThanks!");
-setEmailLink("emailPro","Scope call for Launch System","Hi GIS,\n\nWe’re exploring the $8,000 Launch System.\nTeam size:\nWebsite:\nOutcomes:\nTimeline:\n\nThanks!");
-setEmailLink("emailLab","Apply for Symbolic Lab","Hi GIS,\n\nWe’d like to apply for Symbolic Lab.\nCompany:\nWebsite:\nBudget range:\nTimeline:\n\nThanks!");
-setEmailLink("emailBtn","Book a 30-min call","Hi GIS,\n\nI’d like to book a call to get started.\n\n—");
-setEmailLink("emailFooter","Project inquiry","Hi GIS,\n\nQuick summary of our needs:\n\n—");
-setEmailLink("emailLearn","Learn More request","Hi GIS,\n\nPlease send the one-page plan and next steps.\nName:\nCompany:\nPhone:\nGoals:\n\nThanks!");
-</script>
+) }
 
-</body>
-</html>
